@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        :root {
+            --fg: #222;
+            --muted: #666;
+            --accent: #2563eb;
+            --bg: #fff;
+            --error: #b00020;
+            --chip: #f1f5f9;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 2rem 1.25rem 3rem;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+            color: var(--fg);
+            background: var(--bg);
+            line-height: 1.5;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { margin: 0 0 1rem 0; font-size: 1.75rem; }
+        p.subtitle { margin-top: 0; color: var(--muted); }
+        form {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto;
+            gap: .75rem;
+            align-items: center;
+            margin: 1rem 0 1.25rem;
+        }
+        input[type="number"], select, button {
+            font-size: 1rem;
+            padding: .5rem .6rem;
+            border: 1px solid #d1d5db;
+            border-radius: .5rem;
+            width: 100%;
+        }
+        button {
+            grid-column: 1 / -1;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: filter .15s ease-in-out;
+        }
+        button:hover { filter: brightness(1.05); }
+        .error {
+            color: var(--error);
+            background: #fdecec;
+            border: 1px solid #fac7c7;
+            padding: .75rem 1rem;
+            border-radius: .5rem;
+            margin: .5rem 0 1rem;
+        }
+        .result-card {
+            margin-top: .5rem;
+            padding: 1.25rem;
+            border: 1px solid #e5e7eb;
+            border-radius: .75rem;
+            background: white;
+        }
+        .expression {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: .5px;
+        }
+        .chips {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+            margin-top: .75rem;
+            justify-content: center;
+        }
+        .chip {
+            background: var(--chip);
+            padding: .25rem .6rem;
+            border-radius: 999px;
+            font-size: .9rem;
+            color: #334155;
+        }
+        .hint {
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: .95rem;
+            text-align: center;
+        }
+        code {
+            background: #f6f8fa;
+            padding: .2rem .35rem;
+            border-radius: 4px;
+        }
+        @media (max-width: 520px) {
+            form { grid-template-columns: 1fr 1fr; }
+            form > .op { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Calculator</h1>
+    <p class="subtitle">Compute a simple expression using <strong>+</strong>, <strong>-</strong>, <strong>*</strong>, or <strong>/</strong>.</p>
+
+    /calc
+    <input type="number" step="any" name="num1" placeholder="num1" th:value="${num1}">
+    <select class="op" name="op" th:value="${op}">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" step="any" name="num2" placeholder="num2" th:value="${num2}">
+    <button type="submit">Calculate</button>
+    </form>
+
+    <!-- Error block -->
+    <div th:if="${error}" class="error" th:text="${error}">
+        Error goes here
+    </div>
+
+    <!-- Result block -->
+    <div th:if="${result != null}" class="result-card">
+        <!-- Large, single-line expression like: 2 * 8 = 16 -->
+        <div class="expression">
+            <span th:text="${num1}">num1</span>
+            <span th:text="${op}">*</span>
+            <span th:text="${num2}">num2</span>
+            =
+            <span th:text="${result}">result</span>
+        </div>
+
+        <!-- Small chips with details -->
+        <div class="chips">
+            <div class="chip">num1: <strong th:text="${num1}">2</strong></div>
+            <div class="chip">op: <strong th:text="${op}">*</strong></div>
+            <div class="chip">num2: <strong th:text="${num2}">8</strong></div>
+            <div class="chip">result: <strong th:text="${result}">16</strong></div>
+        </div>
+    </div>
+
+    <p class="hint">
+        Example link:
+        <code>/calc?num1=2&amp;num2=8&amp;op=%2A</code>
+        (<code>*</code> is <code>%2A</code> when URL-encoded inside HTML)
+    </p>
+</div>
+</body>
+</html>
