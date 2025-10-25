@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Shopping Cart</h1>
+
+<div th:replace="fragments :: flash"></div>
+
+<table border="1">
+    <thead><tr><th>#</th><th>Name</th><th>Qty</th><th>Actions</th></tr></thead>
+    <tbody>
+    <tr th:each="item : ${items}">
+        <td th:text="${item.product.productNumber}">P1</td>
+        <td th:text="${item.product.name}">Pencil</td>
+        <td th:text="${item.quantity}">1</td>
+        <td>
+            <form th:action="@{|/cart/${item.product.productNumber}/add|}" method="post" style="display:inline">
+                <button type="submit">+</button>
+            </form>
+            <form th:action="@{|/cart/${item.product.productNumber}/removeOne|}" method="post" style="display:inline">
+                <button type="submit">-</button>
+            </form>
+            <form th:action="@{|/cart/${item.product.productNumber}/removeAll|}" method="post" style="display:inline">
+                <button type="submit">Remove</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p>Total quantity: <b th:text="${totalQty}">0</b></p>
+
+<p><a th:href="@{/products}">Back to Products</a></p>
+</body>
+</html>

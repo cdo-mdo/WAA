@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Products</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Products</h1>
+
+<div th:replace="fragments :: flash"></div>
+
+<!-- Add product form -->
+<form th:action="@{/products/add}" th:object="${product}" method="post">
+    <div>
+        <label>Product Number</label>
+        <input type="text" th:field="*{productNumber}"/>
+        <span th:if="${#fields.hasErrors('productNumber')}"
+              th:errors="*{productNumber}">err</span>
+    </div>
+    <div>
+        <label>Name</label>
+        <input type="text" th:field="*{name}"/>
+        <span th:if="${#fields.hasErrors('name')}"
+              th:errors="*{name}">err</span>
+    </div>
+    <div>
+        <label>Price</label>
+        <input type="text" th:field="*{price}"/>
+        <span th:if="${#fields.hasErrors('price')}"
+              th:errors="*{price}">err</span>
+    </div>
+    <button type="submit">Add</button>
+</form>
+
+<hr/>
+
+<!-- Product list -->
+<table border="1">
+    <thead><tr><th>#</th><th>Name</th><th>Price</th><th>Actions</th></tr></thead>
+    <tbody>
+    <tr th:each="p : ${products}">
+        <td th:text="${p.productNumber}">P1</td>
+        <td th:text="${p.name}">Name</td>
+        <td th:text="${p.price}">Price</td>
+        <td>
+            <form th:action="@{|/products/${p.productNumber}/delete|}" method="post" style="display:inline">
+                <button type="submit">Delete</button>
+            </form>
+            <form th:action="@{|/cart/${p.productNumber}/add|}" method="post" style="display:inline">
+                <button type="submit">Add to Cart</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p><a th:href="@{/cart}">Go to Cart</a></p>
+</body>
+</html>
