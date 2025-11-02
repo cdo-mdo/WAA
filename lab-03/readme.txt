@@ -1,3 +1,7 @@
+a) Status of the lab
+I finished all features of 2 excercises BookController and BankController.
+
+b)
 I hereby declare that this submission is my own original work and to the best of my knowledge it contains no materials previously published or written by another person. 
 I am aware that submitting solutions that are not my own work will result in an NC of the course. 
 I am aware that I am not allowed to share solutions with other students. 
