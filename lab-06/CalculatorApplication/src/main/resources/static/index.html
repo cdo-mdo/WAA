@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Calculator</title>
+</head>
+<body>
+<h2>WebSocket Calculator</h2>
+
+<input type="text" id="expression" placeholder="Enter expression e.g. 3+5" />
+<button id="sendBtn">Calculate</button>
+
+<p><strong>Result:</strong> <span id="result"></span></p>
+
+<script>
+    // Connect to WebSocket endpoint
+    const socket = new WebSocket("ws://localhost:8080/calculator");
+
+    const resultSpan = document.getElementById("result");
+    const sendBtn = document.getElementById("sendBtn");
+    const exprInput = document.getElementById("expression");
+
+    socket.onopen = function () {
+        console.log("WebSocket connected");
+    };
+
+    socket.onmessage = function (event) {
+        resultSpan.textContent = event.data;
+    };
+
+    socket.onerror = function (event) {
+        console.error("WebSocket error", event);
+        resultSpan.textContent = "WebSocket error (check console)";
+    };
+
+    socket.onclose = function () {
+        console.log("WebSocket closed");
+    };
+
+    sendBtn.addEventListener("click", function () {
+        const expr = exprInput.value;
+        if (!expr) {
+            resultSpan.textContent = "Please enter an expression.";
+            return;
+        }
+        socket.send(expr);
+    });
+
+    // Press Enter to send
+    exprInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            sendBtn.click();
+        }
+    });
+</script>
+</body>
+</html>
