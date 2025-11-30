@@ -1,0 +1,25 @@
+type Transaction {
+    timestamp: String!
+    amount: Float!
+    type: String!
+}
+
+type BankAccount {
+    id: ID!
+    accountNumber: Int!
+    holderName: String!
+    balance: Float!
+    transactions: [Transaction!]!
+}
+
+type Query {
+    accounts: [BankAccount!]!
+    account(accountNumber: Int!): BankAccount
+}
+
+type Mutation {
+    createAccount(accountNumber: Int!, holderName: String!): BankAccount!
+    deposit(accountNumber: Int!, amount: Float!): BankAccount!
+    withdraw(accountNumber: Int!, amount: Float!): BankAccount!
+    removeAccount(accountNumber: Int!): Boolean!
+}
