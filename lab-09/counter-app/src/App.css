@@ -1,0 +1,20 @@
+.App {
+  padding: 40px;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.counter h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  font-size: 20px;
+  padding: 8px 16px;
+  margin-right: 10px;
+}

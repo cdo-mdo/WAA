@@ -18,6 +18,14 @@ public class MyController {
     public ResponseEntity<?> getAdminInfo() {
         return new ResponseEntity<String> ("admin info", HttpStatus.OK);
     }
+    @GetMapping("/manager")
+    public ResponseEntity<?> getManagerInfo() {
+        return new ResponseEntity<String> ("manager info", HttpStatus.OK);
+    }
+    @GetMapping("/topmanager")
+    public ResponseEntity<?> getTopManagerInfo() {
+        return new ResponseEntity<String> ("topmanager info", HttpStatus.OK);
+    }
 }
 
 

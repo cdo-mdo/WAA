@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42b297f1-254a-4bb9-91b5-c954cb9f372a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../WebSecurityProject1/src/main/java/org/deu/miu/cs545de/websecurityproject1/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSecurityProject1/src/main/java/org/deu/miu/cs545de/websecurityproject1/controller/ShopController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../WebSecurityProject1/src/main/java/org/deu/miu/cs545de/websecurityproject1/service/ShopService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myapplication/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myapplication/controller/MyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myapplication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myapplication/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myapplication/controller/MyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myapplication/controller/MyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myapplication/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myapplication/security/SecurityConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605045911785</updated>
-      <workItem from="1765334471752" duration="1393000" />
+      <workItem from="1765334471752" duration="2543000" />
     </task>
     <servers />
   </component>

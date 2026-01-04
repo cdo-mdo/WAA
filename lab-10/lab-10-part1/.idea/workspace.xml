@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b07dc5c-79db-40d4-b60f-0a264847858f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/lab-10-part1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/src/main/java/myapplication/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/src/main/java/myapplication/controller/MyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/src/main/java/myapplication/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/src/main/java/myapplication/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/target/classes/myapplication/controller/MyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/target/classes/myapplication/controller/MyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/target/classes/myapplication/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../lab-08/WebSecurityProject2/target/classes/myapplication/security/SecurityConfig.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="37RBKjtd7fY0TiI15OmpoTEfVMj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/git/WAA/lab-10/lab-10-part1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b07dc5c-79db-40d4-b60f-0a264847858f" name="Changes" comment="" />
+      <created>1766855941980</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1766855941980</updated>
+      <workItem from="1766855944028" duration="314000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

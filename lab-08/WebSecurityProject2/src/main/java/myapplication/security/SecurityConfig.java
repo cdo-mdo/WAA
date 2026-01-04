@@ -41,7 +41,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests( authConfig -> {authConfig
                 .requestMatchers(HttpMethod.GET, "/info").permitAll()
                 .requestMatchers(HttpMethod.GET, "/user").hasAuthority("user")
-                .requestMatchers(HttpMethod.GET, "/admin").hasAuthority("admin");
+                .requestMatchers(HttpMethod.GET, "/admin").hasAuthority("admin")
+                .requestMatchers(HttpMethod.GET, "/manager").hasAuthority("manager")
+                .requestMatchers(HttpMethod.GET, "/topmanager").hasAuthority("topmanager");
         }).httpBasic(Customizer.withDefaults());
 
         return http.build();

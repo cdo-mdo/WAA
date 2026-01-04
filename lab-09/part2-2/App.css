@@ -1,0 +1,14 @@
+.App {
+  padding: 40px;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px;
+}
+
+button {
+  font-size: 32px;
+  padding: 8px 20px;
+}
